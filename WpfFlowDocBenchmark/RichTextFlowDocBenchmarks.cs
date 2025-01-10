@@ -5,13 +5,13 @@ namespace WpfFlowDocBenchmark
 {
     public class RichTextFlowDocBenchmarks
     {
-        [Benchmark, System.STAThread]
+        [Benchmark(Description = "Open RichTextFlowDoc"), System.STAThread]
 #pragma warning disable CA1822
         public void Run()
 #pragma warning restore CA1822
         {
-            var sut = new RichTextFlowDoc();
-            sut.Show();
+            var richTextFlowDoc = new RichTextFlowDoc();
+            richTextFlowDoc.Show();
         }
     }
 }

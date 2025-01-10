@@ -4,7 +4,13 @@ This is a demo project to demonstrates how to use [BenchmarkDotNet](https://benc
 
 ## How to run the benchmarks
 
-Goto the **WpfFlowDocBenchmark** folder and run the following command:
+### Prerequisites
+
+- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+
+### Run the benchmark
+
+On Windows, in the **WpfFlowDocBenchmark** folder run the following command:
 
 ```sh
 dotnet run -c Release -- *

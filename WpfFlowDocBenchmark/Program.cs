@@ -14,7 +14,7 @@ namespace WpfFlowDocBenchmark
                     .WithIterationCount(5)
                     .WithPowerPlan(PowerPlan.UserPowerPlan)
                     .AsDefault());
-            var summary = BenchmarkRunner.Run<RichTextFlowDocBenchmarks>(config, args);
+            BenchmarkRunner.Run<RichTextFlowDocBenchmarks>(config, args);
         }
     }
 }
