@@ -7,9 +7,10 @@
 		<Nullable>enable</Nullable>
 		<Configuration>release</Configuration>
 		<IsPackable>false</IsPackable>
+		<UseWPF>true</UseWPF>
+		<!-- Be sure to set following for using EtwProfiler -->
 		<DebugType>pdbonly</DebugType>
 		<DebugSymbols>true</DebugSymbols>
-		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,6 +26,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+		<PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.14.0" />
 	</ItemGroup>
 
 </Project>

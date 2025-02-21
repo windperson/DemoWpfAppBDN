@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnostics.Windows.Configs;
 using DemoWpfAppBDN.Pages;
 
 namespace WpfFlowDocBenchmark

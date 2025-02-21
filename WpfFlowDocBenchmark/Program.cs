@@ -12,8 +12,9 @@ namespace WpfFlowDocBenchmark
             var config = DefaultConfig.Instance.AddJob(
                 Job.MediumRun.WithWarmupCount(2)
                     .WithIterationCount(5)
-                    .WithPowerPlan(PowerPlan.UserPowerPlan)
+                    .DontEnforcePowerPlan()
                     .AsDefault());
+
             BenchmarkRunner.Run<RichTextFlowDocBenchmarks>(config, args);
         }
     }
