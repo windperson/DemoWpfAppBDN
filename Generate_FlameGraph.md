@@ -8,7 +8,7 @@ And you may need to [config PerfView's resolve symbol feature](https://learn.mic
 1. Run the benchmark with the ETW Profiler enabled and with Administrator privileges:
    
     ```
-    sudo dotnet run -c Release -- --profiler ETW --filter '*'
+    sudo dotnet run --project .\WpfFlowDocBenchmark\WpfFlowDocBenchmark.csproj -c Release -- --profiler ETW --filter '*'
     ```
    
 2. After it finishes, you will see additional ***.etl** file in the `BenchmarkDotNet.Artifacts` folder.  
@@ -23,7 +23,10 @@ And you may need to [config PerfView's resolve symbol feature](https://learn.mic
    ![](./screen_shots/PerfView_see_benchmark_time_portion-04.png)  
    Waiting for PerfView to download symbols from Microsoft public symbol server:  
    ![](./screen_shots/PerfView_see_benchmark_time_portion-05.png)
-7. After symbols are resolved, you can see the Flame Graph of the benchmark by click the second right tab "Flame Graph":  
+7. After symbols are resolved, select "**CallTree**" tab, use the top right ***Find:*** input box and type `Run\(\)` (This input field accepts *Regular Expression* string) and press Enter to find the benchmark method quickly, and you can right click on the entry and choose "Drill Into" to focus only on the benchmark method:  
+   ![](./screen_shots/PerfView_Drill_Into-01.png)  
+   ![](./screen_shots/PerfView_Drill_Into-02.png)  
+8. Also you can see the Flame Graph of the benchmark by click the second right tab "Flame Graph":  
    ![](./screen_shots/PerfView_see_benchmark_time_portion-final.png)  
    You can use the **Fold%** input box in middle top of the window, to filter out the less significant parts of the Flame Graph,  
    And select the correct entry on top left **GroupPats** input box to see invoked Class.Methods in the Flame Graph.
