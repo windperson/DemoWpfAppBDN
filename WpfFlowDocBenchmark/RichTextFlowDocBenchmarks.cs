@@ -1,12 +1,12 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Diagnostics.Windows.Configs;
 using DemoWpfAppBDN.Pages;
 
 namespace WpfFlowDocBenchmark
 {
+    [MemoryDiagnoser(displayGenColumns: true)]
     public class RichTextFlowDocBenchmarks
     {
-        [Benchmark(Description = "Open RichTextFlowDoc"), System.STAThread]
+        [Benchmark(Description = "Open RichTextFlowDoc"), STAThread]
 #pragma warning disable CA1822
         public void Run()
 #pragma warning restore CA1822

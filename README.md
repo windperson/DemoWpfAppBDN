@@ -19,7 +19,6 @@ dotnet run -c Release -- *
 
 ![screen shot](./screen_shots/run_benchmark.png)
 
-
 ## Generate Flame Graph
 
 See [Generate_FlameGraph.md](Generate_FlameGraph.md) for instructions on how to generate Flame Graphs of benchmark runs.
